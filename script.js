@@ -1,58 +1,51 @@
-let plusOne = document.querySelectorAll(".increaseButton1");
-let plus2 = document.querySelectorAll(".increaseButton2");
-let plus3 = document.querySelectorAll(".increaseButton3");
-let minus1 = document.querySelectorAll(".decreaseButton1");
-let minus2 = document.querySelectorAll(".decreaseButton2");
-let minus3 = document.querySelectorAll(".decreaseButton3");
-let totalProductsOne = document.querySelector("noOfProdutcsOne");
+let plusOne = document.querySelector("#increaseButtonOne");
+let plusTwo = document.querySelector("#increaseButtonTwo");
+let plusThree = document.querySelector("#increaseButtonThree");
+let minusOne = document.querySelector("#decreaseButtonOne");
+let minusTwo = document.querySelector("#decreaseButtonTwo");
+let minusThree = document.querySelector("#decreaseButtonThree");
+let totalOne = document.querySelector("noOfProductsOne");
+let totalTwo = document.querySelector("noOfProductsTwo");
+let totalThree = document.querySelector("noOfProductsThree");
 
-var count = 0;
-
-function add() {
-    let currentValue = Number(document.querySelector("#noOfProductsOne").innerText);
-
-    totalProductsOne.innerText = currentValue + 1;
-
+function addOne() {
+    let currentValueOne = Number(document.querySelector("#noOfProductsOne").innerText);
+    document.querySelector("#noOfProductsOne").innerText = currentValueOne + 1; 
 }
 
-function sub() {
-    count--;
-    return count;
+function addTwo() {
+    let currentValueTwo = Number(document.querySelector("#noOfProductsTwo").innerText);
+    document.querySelector("#noOfProductsTwo").innerText = currentValueTwo + 1; 
 }
 
-plusOne.addEventListener("click", add);
+function addThree() {
+    let currentValueThree = Number(document.querySelector("#noOfProductsThree").innerText);
+    document.querySelector("#noOfProductsThree").innerText = currentValueThree + 1; 
+}
+// function addThree() {
+//     let currentValueThree = Number(document.querySelector("#noOfProductsThree").innerText);
+//     document.querySelector("#noOfProductsThree").innerText = currentValueThree + 1; 
+// };
 
-// plusOne.addEventListener("click", function() {
-//     alert ("hello")
-//     let productOneAdd = add();  
-//     document.querySelector(".noOfProducts1").innerHTML = productOneAdd;
-// });
+function subOne() {
+    let currentValueOne = Number(document.querySelector("#noOfProductsOne").innerText);
+    document.querySelector("#noOfProductsOne").innerText = currentValueOne - 1; 
+}
 
-// plus2.addEventListener("click", () => {
-//     alert ("hello");
-//     let productOneAdd = add().document.querySelector(".noOfProducts2").innerHTML = productOneAdd;
-// })
+function subTwo() {
+    let currentValueTwo = Number(document.querySelector("#noOfProductsTwo").innerText);
+    document.querySelector("#noOfProductsTwo").innerText = currentValueTwo - 1; 
+}
 
-// plus3.addEventListener("click", () => {
-    // alert ("hello");
-    // let productOneAdd = add().document.querySelector(".noOfProducts3").innerHTML = productOneAdd;
-// })
+function subThree() {
+    let currentValueThree = Number(document.querySelector("#noOfProductsThree").innerText);
+    document.querySelector("#noOfProductsThree").innerText = currentValueThree - 1; 
+}
 
-// minus1.addEventListener("click", () => {
-//     // alert ("hello");
-//     let productOneAdd = add();
-//     document.querySelector(".noOfProducts3").innerHTML = productOneAdd;
-// })
+plusOne.addEventListener("click", addOne);
+plusTwo.addEventListener("click", addTwo);
+plusThree.addEventListener("click", addThree);
 
-
-
-
-// plus.addEventListener("click", () => {
-//     let output = add();
-//     noOfProducts.innerHTML = `${output}`;
-//     console.log(output)
-// });
-
-// minus.addEventListener("click", () => {
-//     sub();
-// });
+minusOne.addEventListener("click", subOne);
+minusTwo.addEventListener("click", subTwo);
+minusThree.addEventListener("click", subThree);

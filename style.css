@@ -59,6 +59,22 @@ body {
 
 }
 
+.text > img {
+    height: 100%;
+    width: 100%;
+    /* background-color: none; */
+}
+
+img:hover {
+    transform: scale(0.8);
+    /* transition-duration: 3s; */
+    padding-left: 5rem;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 2;
+
+}
+
 .buttons {
     border-style: none;
     font-size: 25px;
@@ -78,6 +94,7 @@ body {
     justify-content: space-evenly;
     /* font-size: 20px; */
     border: solid 2px black;
+    background-color: red;
 }
 
 .buttonContainer input {
@@ -88,14 +105,29 @@ body {
 }
 
 .decreaseButton, .increaseButton {
-    font-size: 30px;
+    width: 15%;
+    height: 90%;
+    margin-top: 2px;
+    font-size: 2rem;
     border-style: none;
     background-color: transparent;
+}
 
+.increaseButton:hover, .decreaseButton:hover {
+    /* border: solid 2px black; */
+ /* add a box-shadow: ; */
+    border-radius: 30%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+    cursor: pointer;
 }
 
 .noOfProducts {
-    border: solid 2px red;
+    /* border: solid 2px black; */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
